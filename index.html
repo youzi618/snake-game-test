@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>贪吃蛇游戏</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-container">
+        <div class="game-header">
+            <h1>贪吃蛇游戏</h1>
+            <div class="score-container">
+                <span>分数: </span>
+                <span id="score">0</span>
+            </div>
+            <div class="high-score-container">
+                <span>最高分: </span>
+                <span id="highScore">0</span>
+            </div>
+        </div>
+        <div class="game-controls">
+            <button id="startBtn">开始游戏</button>
+            <button id="pauseBtn">暂停</button>
+            <div class="speed-control">
+                <label for="speedRange">速度: </label>
+                <input type="range" id="speedRange" min="1" max="10" value="5">
+                <span id="speedValue">5</span>
+            </div>
+        </div>
+        <canvas id="gameCanvas" width="500" height="500"></canvas>
+        <div class="game-instructions">
+            <h2>游戏说明</h2>
+            <p>使用键盘上的方向键（↑，↓，←，→）或 W, A, S, D 键控制蛇的移动方向。</p>
+            <p>吃到食物可以增加分数和蛇的长度。</p>
+            <p>撞到墙壁或自己的身体会导致游戏结束。</p>
+        </div>
+    </div>
+    <div id="gameOverModal" class="modal">
+        <div class="modal-content">
+            <h2>游戏结束!</h2>
+            <p>你的分数: <span id="finalScore">0</span></p>
+            <button id="restartBtn">重新开始</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
