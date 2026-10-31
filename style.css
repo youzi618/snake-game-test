@@ -145,3 +145,7 @@ canvas#gameCanvas {
         height: auto;
     }
 }
+canvas#gameCanvas { touch-action: none; }
+.mobile-directions { display: none; text-align: center; margin-top: 14px; }
+.mobile-directions button { min-width: 56px; min-height: 48px; margin: 3px; font-size: 1.3rem; }
+@media (pointer: coarse) { .mobile-directions { display: block; } }
